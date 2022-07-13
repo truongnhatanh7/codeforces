@@ -6,10 +6,13 @@
 #include <stack>
 #include <queue>
 #include <deque>
+#include <list>
 #include <algorithm>
+#include <iterator>
 
-#define long long ll
-
+#define ll long long
+#define pii pair<int , int>
+#define pll pair<long long, long long>
 
 using namespace std;
 

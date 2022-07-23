@@ -9,6 +9,8 @@
 #include <list>
 #include <algorithm>
 #include <iterator>
+#include <string>
+
 
 #define ll long long
 #define pii pair<int , int>
@@ -18,6 +20,7 @@ using namespace std;
 
 int t;
 int n;
+string s;
 
 int main() {
     ios::sync_with_stdio(0);

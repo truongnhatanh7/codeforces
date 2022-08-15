@@ -10,10 +10,10 @@
 #include <algorithm>
 #include <iterator>
 #include <string>
-
+#include <cmath>
 
 #define ll long long
-#define pii pair<int , int>
+#define pii pair<int, int>
 #define pll pair<long long, long long>
 
 using namespace std;
@@ -22,25 +22,33 @@ int t;
 int n;
 string s;
 
-int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+int main()
+{
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
 
-    cin >> n;
-    int ar[n];
-    for (int i = 0; i < n; i++) {
-      cin >> ar[i];
+  cin >> n;
+
+  ll ar[n];
+
+  for (int i = 0; i < n; i++)
+  {
+    cin >> ar[i];
+  }
+
+  ll res = 0;
+
+  for (int i = 1; i < n; i++)
+  {
+    if (ar[i] < ar[i - 1])
+    {
+      res += ar[i - 1] - ar[i];
+      ar[i] = ar[i - 1];
     }
+  }
 
-    int res = 0;
-    for (int i = 1; i < n; i++) {
-      if (ar[i] < ar[i - 1]) {
-        res += ar[i - 1] - ar[i]; 
-        ar[i] = ar[i - 1] - ar[i]; 
-      }
-    }
+  cout << res << endl;
 
-    cout << res << endl;
-    return 0;
+  return 0;
 }
